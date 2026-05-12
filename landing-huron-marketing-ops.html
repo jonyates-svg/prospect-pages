@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="Published Page">
+    <meta property="og:url" content="https://staging-hyperagent.com/s/Dlqj_B-PQ6vixOmt2DG0SQ">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shared via Hyperagent">
+    <meta property="og:image" content="https://staging-hyperagent.com/static/og-card/hyperagent-icon-1024.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Published Page">
+    <meta name="twitter:image" content="https://staging-hyperagent.com/static/og-card/hyperagent-icon-1024.png">
+    <link rel="icon" type="image/svg+xml" href="https://staging-hyperagent.com/static/favicons/icon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huron × Airtable · Prepared for Marketing Operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Huron brand */
+  --huron: #00558c;
+  --huron-deep: #003d66;
+  --huron-teal: #80cecc;
+  --huron-soft: #E6F1F8;
+  /* Airtable side */
+  --coral: #F82B60;
+  --coral-dark: #D91E4F;
+  --coral-soft: #FFE7ED;
+  /* Neutrals */
+  --ink: #0E0F12;
+  --ink-2: #22252C;
+  --muted: #6B7280;
+  --muted-2: #9CA3AF;
+  --border: #E5E7EB;
+  --border-2: #EEF0F3;
+  --bg: #FFFFFF;
+  --bg-soft: #FAFAFB;
+  --bg-card: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Reveal animation defaults: visible by default; GSAP hides then animates in */
+.reveal, .reveal-left, .reveal-scale { opacity: 1; }
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: background .2s ease, border-color .2s ease;
+}
+nav.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+.nav-huron { color: var(--huron); }
+.nav-x {
+  color: var(--muted-2);
+  font-weight: 400;
+  font-size: 16px;
+}
+.nav-airtable {
+  color: var(--coral);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-airtable-mark {
+  width: 24px; height: 20px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.nav-airtable-mark svg {
+  width: 100%; height: 100%; display: block;
+}
+.nav-right {
+  display: flex; align-items: center; gap: 18px;
+}
+.nav-prepared {
+  font-size: 13px;
+  color: var(--muted);
+}
+.nav-prepared b { color: var(--ink); font-weight: 600; }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--coral);
+  color: #fff;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: background .15s ease, transform .15s ease;
+  box-shadow: 0 1px 2px rgba(248, 43, 96, 0.18), 0 4px 12px rgba(248, 43, 96, 0.18);
+}
+.nav-cta:hover { background: var(--coral-dark); transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  padding: 96px 0 80px;
+  position: relative;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--huron-soft);
+  color: var(--huron);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.eyebrow::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--huron-teal);
+  box-shadow: 0 0 0 4px rgba(128, 206, 204, 0.32);
+}
+h1.hero-title {
+  font-size: clamp(44px, 6.2vw, 80px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: var(--ink);
+  max-width: 980px;
+}
+.grad-huron {
+  background: linear-gradient(92deg, var(--huron-deep) 0%, var(--huron) 50%, var(--huron-teal) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: 800;
+  display: inline-block;
+  padding: 0.02em 0.14em 0.08em 0.06em;
+  margin: 0 -0.06em;
+}
+.grad-coral {
+  background: linear-gradient(92deg, #F82B60 0%, #FF6A3D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: 800;
+  display: inline-block;
+  padding: 0.02em 0.14em 0.08em 0.06em;
+  margin: 0 -0.06em;
+}
+.hero-sub {
+  margin-top: 28px;
+  max-width: 780px;
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--muted);
+  font-weight: 400;
+}
+.hero-sub b { color: var(--ink); font-weight: 600; }
+
+.hero-cta-row {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--coral);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  box-shadow: 0 1px 2px rgba(248, 43, 96, 0.14), 0 6px 16px rgba(248, 43, 96, 0.22);
+}
+.btn-primary:hover { background: var(--coral-dark); transform: translateY(-1px); }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 4px;
+}
+.btn-ghost:hover { color: var(--huron); }
+
+/* IDENTITY BAR */
+.identity {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.id-card {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.id-card:hover { border-color: #C9CFD8; transform: translateY(-1px); }
+.id-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+  overflow: hidden;
+}
+.id-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }
+.id-avatar-jon {
+  background: linear-gradient(135deg, var(--ink), var(--ink-2));
+  color: #fff;
+}
+.id-avatar-team {
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--huron), var(--huron-teal));
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.id-avatar-company {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: 12px;
+}
+.id-avatar-company img { border-radius: 4px; object-fit: contain; }
+.id-label {
+  font-size: 11px;
+  color: var(--muted-2);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.id-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  margin-top: 2px;
+}
+.id-sub {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+/* TLDR EXEC BRIEF */
+.tldr-section {
+  padding: 0 0 56px;
+  position: relative;
+}
+.tldr-card {
+  max-width: 920px;
+  margin: -20px auto 0;
+  background: #fff;
+  border-radius: 22px;
+  padding: 36px 40px;
+  border: 1px solid var(--border);
+  border-left: 5px solid transparent;
+  background-image:
+    linear-gradient(#fff, #fff),
+    linear-gradient(180deg, var(--huron) 0%, var(--huron-teal) 50%, var(--coral) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 30px 60px -30px rgba(14, 15, 18, 0.18);
+  position: relative;
+}
+.tldr-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--huron);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.tldr-body {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.tldr-body b { font-weight: 700; }
+.tldr-hi-huron {
+  background: linear-gradient(180deg, transparent 60%, rgba(128, 206, 204, 0.45) 60%);
+  padding: 0 2px;
+}
+.tldr-hi-coral {
+  background: linear-gradient(180deg, transparent 60%, rgba(248, 43, 96, 0.22) 60%);
+  padding: 0 2px;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  padding: 56px 0 56px;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border-2);
+  border-bottom: 1px solid var(--border-2);
+}
+.video-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.video-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--huron);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.video-title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.video-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+  box-shadow: 0 24px 50px -24px rgba(14, 15, 18, 0.22);
+}
+.video-wrap video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* LOGO STRIP */
+.logos {
+  padding: 64px 0 56px;
+  border-bottom: 1px solid var(--border-2);
+  text-align: center;
+}
+.logos-head {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+.logos-head b { color: var(--ink); font-weight: 600; }
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.logo-chip {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B7280;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 15px;
+  opacity: 0.78;
+  transition: opacity .2s ease, color .2s ease, transform .15s ease;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.logo-chip:hover {
+  opacity: 1;
+  color: var(--huron);
+  border-color: var(--border-2);
+  transform: translateY(-1px);
+}
+
+/* FEATURES */
+.features {
+  padding: 104px 0;
+  border-bottom: 1px solid var(--border-2);
+}
+.section-head {
+  max-width: 820px;
+  margin-bottom: 56px;
+}
+.section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.section-title em {
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(92deg, var(--huron-deep) 0%, var(--huron) 55%, var(--huron-teal) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0.02em 0.14em 0.08em 0.06em;
+  margin: 0 -0.06em;
+}
+.section-lede {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #C9CFD8;
+  box-shadow: 0 24px 44px -20px rgba(0, 85, 140, 0.18);
+}
+
+.feature-visual {
+  height: 220px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+}
+
+/* V1: CONSOLIDATE (pink) */
+.visual-1 {
+  background: linear-gradient(135deg, #FFE7ED 0%, #FFD4E0 60%, #FFBDC7 100%);
+}
+.funnel-in {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.funnel-in .chip {
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  letter-spacing: -0.01em;
+  display: flex; align-items: center; gap: 5px;
+}
+.funnel-in .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--coral); }
+.funnel-arrow {
+  display: flex; justify-content: center;
+  color: var(--coral);
+  font-size: 16px;
+  line-height: 1;
+  margin: 4px 0;
+}
+.funnel-ai {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex; align-items: center; gap: 10px;
+  box-shadow: 0 2px 8px rgba(248, 43, 96, 0.12);
+  width: 92%;
+  margin: 0 auto 8px;
+}
+.ai-badge {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #F82B60, #FF6A3D);
+  color: #fff; font-weight: 800; font-size: 11px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ai-text { font-size: 10.5px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; line-height: 1.3; }
+.ai-text .faint { color: var(--muted); font-weight: 500; }
+.funnel-out { display: flex; gap: 6px; justify-content: center; }
+.okr-pill {
+  background: var(--coral);
+  color: #fff;
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* V2: ACCELERATE (Huron blue/teal) */
+.visual-2 {
+  background: linear-gradient(135deg, #E6F1F8 0%, #C7DEEC 60%, #A8CCE0 100%);
+}
+.roadmap { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+.roadmap-row { display: flex; align-items: center; gap: 8px; }
+.roadmap-label {
+  flex: 0 0 64px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--huron-deep);
+  letter-spacing: 0.02em;
+}
+.roadmap-bars { flex: 1; display: flex; gap: 4px; height: 18px; }
+.rbar { border-radius: 4px; height: 100%; }
+.rbar.b1 { background: var(--huron); }
+.rbar.b2 { background: #4A87B5; }
+.rbar.b3 { background: var(--huron-teal); }
+.rbar.b4 { background: #B0DEDC; }
+.roadmap-foot {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5px;
+  color: var(--huron-deep);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.progress-row {
+  margin-top: 10px;
+  background: #fff;
+  padding: 9px 12px;
+  border-radius: 10px;
+  display: flex; align-items: center; gap: 10px;
+  box-shadow: 0 1px 3px rgba(0, 85, 140, 0.10);
+}
+.pbar {
+  flex: 1;
+  height: 6px;
+  background: #E1EEF7;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.pbar::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; height: 100%;
+  width: 72%;
+  background: linear-gradient(90deg, var(--huron), var(--huron-teal));
+  border-radius: 3px;
+}
+.pbar-label { font-size: 10.5px; font-weight: 700; color: var(--ink); }
+.pbar-pct { font-size: 10.5px; font-weight: 700; color: var(--huron-deep); }
+
+/* V3: PROVE (purple/teal mix) */
+.visual-3 {
+  background: linear-gradient(135deg, #EDE4FF 0%, #D9C6FF 60%, #C5AAFF 100%);
+  display: flex; align-items: center;
+  gap: 14px;
+}
+.unify-rail {
+  width: 2px;
+  height: 88%;
+  background: linear-gradient(180deg, #6B4EE8 0%, var(--huron) 50%, var(--huron-teal) 100%);
+  border-radius: 2px;
+  margin-left: 6px;
+}
+.unify-stack { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.unify-row {
+  background: #fff;
+  border-radius: 10px;
+  padding: 9px 11px;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 1px 3px rgba(107, 78, 232, 0.1);
+}
+.unify-tag {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.ut-cmo { background: #6B4EE8; }
+.ut-seg { background: var(--huron); }
+.ut-agc { background: var(--huron-teal); color: var(--huron-deep); }
+.unify-bars { display: flex; gap: 3px; flex: 1; height: 8px; }
+.ubar { flex: 1; background: #EEF0F3; border-radius: 2px; }
+.ubar.filled.cmo { background: #6B4EE8; }
+.ubar.filled.seg { background: var(--huron); }
+.ubar.filled.agc { background: var(--huron-teal); }
+
+.feature-pain {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--huron);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.feature-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.feature-body {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.feature-body b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.feature-outcome {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(248, 43, 96, 0.08);
+  color: var(--coral);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  align-self: flex-start;
+}
+
+/* PROOF (4-column even grid, old format) */
+.proof {
+  padding: 104px 0;
+  border-bottom: 1px solid var(--border-2);
+}
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.proof-card {
+  border-radius: 18px;
+  padding: 26px 24px;
+  border: 1px solid var(--border);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 240px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.proof-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--coral);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+.proof-card:hover {
+  transform: translateY(-3px);
+  border-color: #C9CFD8;
+  box-shadow: 0 20px 36px -18px rgba(0, 85, 140, 0.18);
+}
+.proof-card:hover::before { transform: scaleX(1); }
+.proof-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+.proof-company {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.proof-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.proof-stat {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  margin-top: 6px;
+}
+.proof-stat .stat-num {
+  background: linear-gradient(92deg, #F82B60 0%, #FF6A3D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.proof-outcome {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-top: auto;
+}
+
+/* CTA */
+.cta-wrap {
+  padding: 96px 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(248, 43, 96, 0.20) 0%, transparent 70%), linear-gradient(180deg, #0E0F12 0%, #16181E 100%);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  color: #FF6A3D;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  border: 1px solid rgba(248, 43, 96, 0.3);
+}
+.cta-title {
+  font-size: clamp(32px, 4.4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.14;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.cta-title em {
+  font-style: italic;
+  background: linear-gradient(92deg, var(--huron-teal) 0%, #FF6A3D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0.02em 0.14em 0.08em 0.06em;
+  margin: 0 -0.06em;
+}
+.cta-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  max-width: 560px;
+  margin: 20px auto 32px;
+  line-height: 1.5;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--coral);
+  color: #fff;
+  padding: 18px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(248, 43, 96, 0.22), 0 12px 36px rgba(248, 43, 96, 0.38);
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+}
+.cta-btn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 1px 3px rgba(248, 43, 96, 0.22), 0 16px 44px rgba(248, 43, 96, 0.48);
+}
+.cta-sig {
+  margin-top: 24px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* FOOTER */
+footer {
+  padding: 28px 0;
+  background: #0E0F12;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+footer a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+footer a:hover { color: var(--coral); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .identity, .features-grid, .logos-grid { grid-template-columns: 1fr; }
+  .proof-grid { grid-template-columns: repeat(2, 1fr); }
+  .logos-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero { padding: 64px 0 56px; }
+  .features, .proof { padding: 64px 0; }
+  .cta-wrap { padding: 72px 0; }
+  .video-section { padding: 48px 0; }
+  .tldr-card { padding: 28px 24px; }
+  .nav-prepared { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav id="topnav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="nav-huron">Huron</span>
+      <span class="nav-x">×</span>
+      <span class="nav-airtable">
+        <span class="nav-airtable-mark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170" aria-hidden="true">
+            <path fill="currentColor" d="M90.039 12.367 24.079 39.66c-3.667 1.519-3.63 6.729.062 8.192l66.235 26.266a24.58 24.58 0 0 0 18.12 0l66.236-26.266c3.69-1.463 3.729-6.673.06-8.191l-65.958-27.294a24.58 24.58 0 0 0-18.795 0M105.312 88.46v65.617c0 3.12 3.147 5.258 6.048 4.108l73.806-28.648a4.42 4.42 0 0 0 2.79-4.108V59.813c0-3.121-3.147-5.258-6.048-4.108l-73.806 28.648a4.42 4.42 0 0 0-2.79 4.108M88.078 91.846l-21.904 10.576-2.224 1.075-46.238 22.155c-2.93 1.414-6.672-.722-6.672-3.978V60.088c0-1.178.604-2.195 1.414-2.96a5 5 0 0 1 1.12-.84c1.104-.663 2.68-.84 4.02-.31L87.71 83.76c3.564 1.414 3.844 6.408.368 8.087"/>
+            <path fill="currentColor" d="m88.078 91.846-21.904 10.576-53.72-45.295a5 5 0 0 1 1.12-.839c1.104-.663 2.68-.84 4.02-.31L87.71 83.76c3.564 1.414 3.844 6.408.368 8.087"/>
+          </svg>
+        </span>
+        Airtable
+      </span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-prepared">Prepared for <b>Marketing Operations</b></div>
+      <a href="https://meet.airtable.com/c/Jon_Yates" class="nav-cta" target="_blank" rel="noopener noreferrer">Book a meeting →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Personalized for Huron</span>
+    <h1 class="hero-title reveal">Jon × <span class="grad-huron">Marketing Ops</span> × Huron.</h1>
+    <p class="hero-sub reveal">
+      Huron's marketing team has the hardest brief in consulting: turning deep partner expertise across <b>Healthcare</b>, <b>Education</b>, and <b>Commercial</b> into the thought leadership that fuels a $1.78B revenue plan. Airtable is the operating layer for that work: every signal, brief, and asset centralized, AI that turns partner conversations into publishable POVs, and one source of truth so every team sees exactly what's shipping and what it's driving.
+    </p>
+    <div class="hero-cta-row reveal">
+      <a href="https://meet.airtable.com/c/Jon_Yates" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        Schedule time with Jon
+        <span>→</span>
+      </a>
+      <a href="#value" class="btn-ghost">See the three plays ↓</a>
+    </div>
+
+    <div class="identity">
+      <div class="id-card reveal">
+        <div class="id-avatar id-avatar-jon">
+          <img src="https://pub.staging-hyperagent.com/api/published/pbf01KREDFZJG_JK8HQBVDJ7TMJ0KF/jon-yates-headshot.jpg" alt="Jon Yates">
+        </div>
+        <div>
+          <div class="id-label">From</div>
+          <div class="id-name">Jon Yates</div>
+          <div class="id-sub">Strategic Accounts Team, Airtable</div>
+        </div>
+      </div>
+      <div class="id-card reveal">
+        <div class="id-avatar id-avatar-team">MO</div>
+        <div>
+          <div class="id-label">For</div>
+          <div class="id-name">Marketing Operations</div>
+          <div class="id-sub">Healthcare · Education · Commercial · Huron</div>
+        </div>
+      </div>
+      <div class="id-card reveal">
+        <div class="id-avatar id-avatar-company">
+          <img src="https://mms.businesswire.com/media/20210114005594/en/852382/21/Huron_Logo.jpg" alt="Huron">
+        </div>
+        <div>
+          <div class="id-label">Re</div>
+          <div class="id-name">Huron</div>
+          <div class="id-sub">Consulting at scale, in an AI-enabled world</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tldr-section">
+  <div class="wrap">
+    <div class="tldr-card reveal-scale">
+      <div class="tldr-eyebrow">TL;DR · Exec Brief</div>
+      <p class="tldr-body">
+        Huron just affirmed <span class="tldr-hi-huron">$1.78B to $1.86B in 2026 revenue</span> on the back of <b>record Healthcare RBR</b>, <b>37% Commercial growth</b>, and six acquisitions in 18 months. CEO Mark Hussey framed the next chapter as serving clients in <span class="tldr-hi-huron">"an increasingly AI-enabled world"</span> and Huron's own AI / data / analytics business grew <b>40%+</b> last year. Marketing Operations sits at the center of that story: turning partner expertise across three segments and several acquired firms into thought leadership that fuels every RFP and renewal. <span class="tldr-hi-coral">Airtable is the operating layer that team needs.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="wrap">
+    <div class="video-head reveal">
+      <span class="video-eyebrow">Before the plays</span>
+      <h2 class="video-title">Two minutes to see how Airtable works.</h2>
+    </div>
+    <div class="video-wrap reveal-scale">
+      <video controls preload="metadata" playsinline>
+        <source src="https://pub.staging-hyperagent.com/api/published/_5B0yET5TNOJjiLe0cg-yw/what_is_airtable_v31%20(1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="logos">
+  <div class="wrap">
+    <div class="logos-head reveal"><b>500,000+ organizations</b> run on Airtable, including 80% of the Fortune 100. Click any logo to read their story.</div>
+    <div class="logos-grid">
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/atlantic-records-netflix-and-time" target="_blank" rel="noopener noreferrer">NETFLIX</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/JetBlue" target="_blank" rel="noopener noreferrer">JetBlue</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/blackrock" target="_blank" rel="noopener noreferrer">BlackRock</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/hubspot" target="_blank" rel="noopener noreferrer">HubSpot</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/equinox-media" target="_blank" rel="noopener noreferrer">Equinox</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/github" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/time" target="_blank" rel="noopener noreferrer">TIME</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/autodesk" target="_blank" rel="noopener noreferrer">Autodesk</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/schaeffler" target="_blank" rel="noopener noreferrer">Schaeffler</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customer-stories/suse" target="_blank" rel="noopener noreferrer">SUSE</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customers" target="_blank" rel="noopener noreferrer">Shopify</a>
+      <a class="logo-chip reveal" href="https://www.airtable.com/customers" target="_blank" rel="noopener noreferrer">Intuit</a>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="value">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="section-title">Three Airtable plays that matter for <em>Huron</em>.</h2>
+      <p class="section-lede">Every Marketing Ops team at a consulting firm runs into the same three problems. They are solvable, and the data Mark Hussey reports on every earnings call gets cleaner when they are solved.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-visual visual-1">
+          <div class="funnel-in">
+            <span class="chip"><span class="dot"></span>Healthcare</span>
+            <span class="chip"><span class="dot"></span>Education</span>
+            <span class="chip"><span class="dot"></span>Commercial</span>
+          </div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-ai">
+            <div class="ai-badge">AI</div>
+            <div class="ai-text">Synthesizing 2,400 partner signals <span class="faint">→ 47 publishable POVs</span></div>
+          </div>
+          <div class="funnel-arrow">↓</div>
+          <div class="funnel-out">
+            <span class="okr-pill">Pipeline</span>
+            <span class="okr-pill">RFPs</span>
+            <span class="okr-pill">Brand</span>
+          </div>
+        </div>
+        <div class="feature-pain">The pain · Fragmented intake</div>
+        <div class="feature-title">Three segments. Six acquired firms. One spreadsheet that does not scale.</div>
+        <div class="feature-body">Webinar requests, RFP support asks, podcast bookings, lost-deal POVs flow in from <b>Healthcare</b>, <b>Education</b>, <b>Commercial</b>, and every firm that came in with AXIA, Treliant, and Wilson Perumal. Airtable centralizes all of it into one operating layer that every team can see, with structured intake forms tied to the work that actually ships.</div>
+        <div class="feature-outcome">Outcome → One source of truth</div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-visual visual-2">
+          <div class="roadmap">
+            <div class="roadmap-row">
+              <div class="roadmap-label">Q2 '26</div>
+              <div class="roadmap-bars">
+                <div class="rbar b1" style="flex:2.5;"></div>
+                <div class="rbar b2" style="flex:1.8;"></div>
+                <div class="rbar b3" style="flex:1;"></div>
+              </div>
+            </div>
+            <div class="roadmap-row">
+              <div class="roadmap-label">Q3 '26</div>
+              <div class="roadmap-bars">
+                <div class="rbar b2" style="flex:1.3;"></div>
+                <div class="rbar b1" style="flex:2;"></div>
+                <div class="rbar b4" style="flex:1.6;"></div>
+              </div>
+            </div>
+            <div class="roadmap-row">
+              <div class="roadmap-label">Q4 '26</div>
+              <div class="roadmap-bars">
+                <div class="rbar b3" style="flex:1.6;"></div>
+                <div class="rbar b1" style="flex:1.2;"></div>
+                <div class="rbar b2" style="flex:2;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="progress-row">
+            <div class="pbar-label">Editorial readiness</div>
+            <div class="pbar"></div>
+            <div class="pbar-pct">72%</div>
+          </div>
+          <div class="roadmap-foot">
+            <span>Adobe</span>
+            <span>Marketo</span>
+            <span>Salesforce</span>
+          </div>
+        </div>
+        <div class="feature-pain">The pain · Partner bottleneck</div>
+        <div class="feature-title">Partner expertise stuck in calendars, call recordings, and lost-deal notes.</div>
+        <div class="feature-body">A 30 minute partner interview is the raw material for <b>three to five publishable assets</b>, but only if someone can capture, transcribe, structure, and ghostwrite. Airtable's AI does the structuring and drafting. Partner time stays at 2-3 hours per month, content output scales <b>three to five times</b>.</div>
+        <div class="feature-outcome">Outcome → Days, not quarters</div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-visual visual-3">
+          <div class="unify-rail"></div>
+          <div class="unify-stack">
+            <div class="unify-row">
+              <span class="unify-tag ut-cmo">CMO</span>
+              <div class="unify-bars">
+                <span class="ubar filled cmo"></span>
+                <span class="ubar filled cmo"></span>
+                <span class="ubar filled cmo"></span>
+                <span class="ubar"></span>
+                <span class="ubar"></span>
+              </div>
+            </div>
+            <div class="unify-row">
+              <span class="unify-tag ut-seg">SEG</span>
+              <div class="unify-bars">
+                <span class="ubar filled seg"></span>
+                <span class="ubar filled seg"></span>
+                <span class="ubar filled seg"></span>
+                <span class="ubar filled seg"></span>
+                <span class="ubar"></span>
+              </div>
+            </div>
+            <div class="unify-row">
+              <span class="unify-tag ut-agc">AGC</span>
+              <div class="unify-bars">
+                <span class="ubar filled agc"></span>
+                <span class="ubar filled agc"></span>
+                <span class="ubar"></span>
+                <span class="ubar"></span>
+                <span class="ubar"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-pain">The pain · Stops at downloads</div>
+        <div class="feature-title">Marketing's impact gets reported in downloads, not pipeline.</div>
+        <div class="feature-body">Fewer than <b>half</b> of the assets a consulting marketing team produces get used in sales conversations. Airtable connects every published POV to RFP citations, qualified meetings, and content-influenced revenue. The CMO sees the portfolio. Segment leads see their own pipeline. Mark sees the data he reports each quarter.</div>
+        <div class="feature-outcome">Outcome → Pipeline per asset</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="section-title">Proof the plays land.</h2>
+      <p class="section-lede">Real outcomes from large, multi-segment marketing teams running on Airtable.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card reveal">
+        <div class="proof-icon">🏭</div>
+        <div>
+          <div class="proof-tag">Industrials · 120k employees</div>
+          <div class="proof-company">Schaeffler</div>
+        </div>
+        <div class="proof-stat" data-target="50"><span class="stat-num">50%</span></div>
+        <div class="proof-outcome">Content cycle time cut in half. Six legacy tools consolidated into one.</div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-icon">📈</div>
+        <div>
+          <div class="proof-tag">B2B Tech · Marketing Ops</div>
+          <div class="proof-company">SUSE</div>
+        </div>
+        <div class="proof-stat"><span class="stat-num">60%</span></div>
+        <div class="proof-outcome">Faster campaign launches. 100% reduction in campaign-creation SLA.</div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-icon">🎓</div>
+        <div>
+          <div class="proof-tag">Education · Content Ops</div>
+          <div class="proof-company">HubSpot Academy</div>
+        </div>
+        <div class="proof-stat"><span class="stat-num">30 hrs</span></div>
+        <div class="proof-outcome">Per week saved on marketing project management, returned to the team.</div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-icon">🎬</div>
+        <div>
+          <div class="proof-tag">Media · Content Supply Chain</div>
+          <div class="proof-company">Equinox Media</div>
+        </div>
+        <div class="proof-stat"><span class="stat-num">400%</span></div>
+        <div class="proof-outcome">Faster publishing. 50 classes per week, up from 50 in six months.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap" id="book">
+  <div class="wrap">
+    <span class="cta-eyebrow reveal">30 minutes, worth your time</span>
+    <h2 class="cta-title reveal">Let's look at what this could mean for <em>Huron</em>.</h2>
+    <p class="cta-sub reveal">No slideware. No generic demo. Thirty minutes on your actual editorial calendar and where Airtable fits.</p>
+    <a href="https://meet.airtable.com/c/Jon_Yates" class="cta-btn reveal-scale" target="_blank" rel="noopener noreferrer">
+      Schedule time
+      <span>→</span>
+    </a>
+    <div class="cta-sig">Sent with intent by Jon Yates · Strategic Accounts Team, Airtable</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>Built for Marketing Operations · Huron · May 2026</div>
+    <a href="https://www.airtable.com/solutions/marketing" target="_blank" rel="noopener noreferrer">airtable.com/solutions/marketing →</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/ScrollTrigger.min.js"></script>
+<script>
+// FOUC-safe: only run animations if GSAP loaded
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+gsap.registerPlugin(ScrollTrigger);
+
+// Hide reveal elements immediately so the entrance animation reads
+gsap.set('.reveal, .reveal-left, .reveal-scale', { opacity: 0 });
+gsap.set('.features-grid .feature-card', { opacity: 0 });
+gsap.set('.proof-grid .proof-card', { opacity: 0 });
+gsap.set('.logos-grid .logo-chip', { opacity: 0 });
+
+// Nav scroll detection
+const nav = document.getElementById('topnav');
+ScrollTrigger.create({
+  start: 'top -80',
+  end: 99999,
+  onUpdate: (self) => {
+    if (self.scroll() > 80) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+});
+
+// SCROLL-LINKED REVEALS — animation progress tied to scroll position, 1s smoothing
+
+// Fade-up, scroll-linked
+gsap.utils.toArray('.reveal').forEach((el) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1, y: 0, ease: 'none',
+      scrollTrigger: { trigger: el, start: 'top bottom-=80', end: 'top 70%', scrub: 1 }
+    }
+  );
+});
+
+// Scale-in, scroll-linked
+gsap.utils.toArray('.reveal-scale').forEach((el) => {
+  gsap.fromTo(el,
+    { opacity: 0, scale: 0.94, y: 20 },
+    {
+      opacity: 1, scale: 1, y: 0, ease: 'none',
+      scrollTrigger: { trigger: el, start: 'top bottom-=80', end: 'top 72%', scrub: 1 }
+    }
+  );
+});
+
+// Slide-from-left, scroll-linked
+gsap.utils.toArray('.reveal-left').forEach((el) => {
+  gsap.fromTo(el,
+    { opacity: 0, x: -60 },
+    {
+      opacity: 1, x: 0, ease: 'none',
+      scrollTrigger: { trigger: el, start: 'top bottom-=80', end: 'top 70%', scrub: 1 }
+    }
+  );
+});
+
+// Feature cards: each scrubs in independently as it enters
+gsap.utils.toArray('.features-grid .feature-card').forEach((el) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 60 },
+    {
+      opacity: 1, y: 0, ease: 'none',
+      scrollTrigger: { trigger: el, start: 'top bottom-=40', end: 'top 75%', scrub: 1 }
+    }
+  );
+});
+
+// Proof cards: each scrubs in independently
+gsap.utils.toArray('.proof-grid .proof-card').forEach((el) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1, y: 0, ease: 'none',
+      scrollTrigger: { trigger: el, start: 'top bottom-=40', end: 'top 78%', scrub: 1 }
+    }
+  );
+});
+
+// Logo chips: single stagger reveal (one-time, looks better as a row sweep)
+gsap.fromTo('.logos-grid .logo-chip',
+  { opacity: 0, y: 20 },
+  {
+    opacity: 0.78, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.05,
+    scrollTrigger: { trigger: '.logos-grid', start: 'top 88%', toggleActions: 'play none none none' }
+  }
+);
+
+// Number counter on Schaeffler 50% stat — scrubs from 0 to target as you scroll past
+document.querySelectorAll('.proof-stat[data-target]').forEach((el) => {
+  const target = parseInt(el.dataset.target, 10);
+  const numEl = el.querySelector('.stat-num');
+  const suffix = numEl.textContent.replace(/[0-9]/g, '');
+  const obj = { v: 0 };
+  gsap.to(obj, {
+    v: target, ease: 'none',
+    onUpdate: () => { numEl.textContent = Math.round(obj.v) + suffix; },
+    scrollTrigger: { trigger: el, start: 'top bottom-=40', end: 'top 75%', scrub: 1 }
+  });
+});
+
+} // end GSAP guard
+</script>
+</body>
+</html>
